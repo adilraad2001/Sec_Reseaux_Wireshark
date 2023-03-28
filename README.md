@@ -1,5 +1,6 @@
 # TP2_Sec_Reseaux
-![LOGO](https://user-images.githubusercontent.com/99618982/225015198-317d743a-74b9-44ad-a13b-7e698620b346.jpeg)
+![225015198-317d743a-74b9-44ad-a13b-7e698620b346](https://user-images.githubusercontent.com/99618982/228326792-b9cef933-9357-469b-9509-8b163bd05045.jpeg)
+
 Realisé Par : Adil Erraad
 
 # Sommaire:
@@ -172,7 +173,7 @@ To make it easy to explain w'll work with an udp packet
 As u can see it's in hexadecimal :
 
 Ethernet Header:
-- Destination MAC Address: 00:00:00:01:00:06
+- Destination MAC Address:
 - Source MAC Address: 08:00:27:5a:f5:71
 - EtherType: 0x0800 (IPv4)
 
@@ -188,13 +189,13 @@ IP Header:
 - Time to Live: 0xa7
 - Protocol: 0x11 (UDP)
 - Header Checksum: 0x0102
-- Source IP Address: 218.198.4.210
-- Destination IP Address: 111.32.32.114
+- Source IP Address: 192.168.1.2
+- Destination IP Address: 192.167.1.2
 
 UDP Header:
 
 - Source Port: 0x0040 (64)
-- Destination Port: 0x1127 (4391)
+- Destination Port: 0x4D2 (1234)
 - Length: 0x0014 (20 bytes)
 - Checksum: 0x4b01
 
@@ -204,3 +205,5 @@ Payload:
     
  
  4. **Conclusion:**
+
+So, in the conclusion, we see that in order to make a device that works as a router, we need to have several factors must be in the device and that the data is sent through several forms that urges several information about the data such as the source, the time and the destination, and as it can be sent different packages when sending a type An example when we send a packet of type Icmp we see new packet of arp.
