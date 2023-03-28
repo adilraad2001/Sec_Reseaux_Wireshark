@@ -138,11 +138,30 @@ Server:
     
   _*Now let's cupt the traffic between the two client*_
 
-
-   
-
  3. **Capture des traffic:**
+
+  There are many open sources that can be used to analyze packets in order to know what is going on when a packet is sent within a network. For example, there is Wireshark, which we will use for this analysze
+  
+  After installing Wireshark on the server, we run it in administrator mode and start monitoring the packets passing through the network.
+  
+ ![17](https://user-images.githubusercontent.com/99618982/228299308-f79edf4e-5a4e-41dc-86c6-994dfabd45ed.jpg)
  
+ As we can see there is no packet going through
+ 
+ let's send icmp packet by pinging:
+ 
+ ![18](https://user-images.githubusercontent.com/99618982/228305528-bf48c41f-8068-40c0-9ccc-2c79046595f7.jpg)
+ 
+![19](https://user-images.githubusercontent.com/99618982/228311086-9acb5077-e0d4-4367-a164-be74e7f5232f.jpg)
+
+We also see that there are other arp packet with the icmp
+
+**Now let's start to explain  the data that we have capted by wireshark**
+
+To make it easy to explain w'll work with an udp packet
+
+
+
  
     
  
