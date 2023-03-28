@@ -160,9 +160,47 @@ We also see that there are other arp packet with the icmp
 
 To make it easy to explain w'll work with an udp packet
 
+![21](https://user-images.githubusercontent.com/99618982/228318764-79aca133-5709-4b81-9f68-d681aed5e52a.jpg)
 
+![22](https://user-images.githubusercontent.com/99618982/228318783-decf6734-1678-4304-841c-204e205e39cd.jpg)
 
- 
+ As u can see we send "Hello World" As udp data to the client2 using port 1234 from client1 And receive this we see this data in wireshark:
+
+00 00 00 01 00 06 08 00 45 00 00 28 94 fe 40 00 co a7 01 02 da c6 04 d2 6f 20 57 6f 72 6c 64 Oa
+27 5a f5 71 00 00 08 00 40 11 22 73 co a8 01 02 00 14 4b 01 48 65 6c 6c 00 00 00 00 00 00
+
+As u can see it's in hexadecimal :
+
+Ethernet Header:
+- Destination MAC Address: 00:00:00:01:00:06
+- Source MAC Address: 08:00:27:5a:f5:71
+- EtherType: 0x0800 (IPv4)
+
+IP Header:
+
+- Version: 4
+- Header Length: 5 (20 bytes)
+- Differentiated Services Field: 0x00
+- Total Length: 0x0028 (40 bytes)
+- Identification: 0x94fe
+- Flags: 0x40
+- Fragment Offset: 0x0000
+- Time to Live: 0xa7
+- Protocol: 0x11 (UDP)
+- Header Checksum: 0x0102
+- Source IP Address: 218.198.4.210
+- Destination IP Address: 111.32.32.114
+
+UDP Header:
+
+- Source Port: 0x0040 (64)
+- Destination Port: 0x1127 (4391)
+- Length: 0x0014 (20 bytes)
+- Checksum: 0x4b01
+
+Payload:
+
+- The payload of the UDP packet is "Hello", which is represented in hexadecimal as "48 65 6c 6c 6f".
     
  
  4. **Conclusion:**
